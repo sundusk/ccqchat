@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<EMClientDelegate>
 
 @end
 
@@ -22,6 +22,19 @@
     EMOptions *options = [EMOptions optionsWithAppkey:@"1101161108115711#ccqchat"];
     options.apnsCertName = nil;
     [[EMClient sharedClient] initializeSDKWithOptions:options];
+    
+    //添加回调监听代理:
+    [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
+    
+    //判断是否可以自动登录
+    BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
+    if (isAutoLogin) {//自动登录，修改根控制器
+        // 获取tabBarVc
+        UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        // 设置根控制器
+        [self window].rootViewController = [mainSB instantiateViewControllerWithIdentifier:@"CCQTabBar"];
+    }
     return YES;
 }
 
@@ -37,4 +50,21 @@
 {
     [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
+
+
+#pragma mark - EMClientDelegate
+/*!
+ *  自动登录返回结果
+ *
+ *  @param aError 错误信息
+ */
+- (void)autoLoginDidCompleteWithError:(EMError *)aError{
+    
+    if (aError) {
+        NSLog(@"自动登录失败%@",aError);
+    }else{
+        NSLog(@"自动登录成功");
+    }
+}
+
 @end

@@ -8,7 +8,7 @@
 
 #import "CCQLoginViewController.h"
 
-@interface CCQLoginViewController ()
+@interface CCQLoginViewController ()<UIScrollViewDelegate>
 
 /**
  账号
@@ -48,7 +48,18 @@
     EMError *error = [[EMClient sharedClient] loginWithUsername:self.accountTF.text password:self.pwdTF.text];
     if (!error) {
         NSLog(@"登录成功");
+        [[EMClient sharedClient].options setIsAutoLogin:YES];
+        // 跳转根控制器
+        UIStoryboard *mainSB = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+       [[UIApplication sharedApplication].delegate window].rootViewController = [mainSB instantiateViewControllerWithIdentifier:@"CCQTabBar"];
     }
 }
 
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    
+    // 滚动时取消编辑
+    [self.view endEditing:YES];
+}
 @end

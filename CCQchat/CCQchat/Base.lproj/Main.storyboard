@@ -529,7 +529,7 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="9j7-lk-gcH">
             <objects>
-                <tabBarController storyboardIdentifier="HMTabBar" id="AKN-aW-ygj" customClass="HMTabBarViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="CCQTabBar" id="AKN-aW-ygj" customClass="HMTabBarViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Jyr-r0-ap5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
