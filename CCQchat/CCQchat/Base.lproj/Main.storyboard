@@ -595,7 +595,7 @@
         <!--Login View Controller-->
         <scene sceneID="4wj-1C-RgV">
             <objects>
-                <viewController storyboardIdentifier="HMLogin" id="Mst-Lu-Srt" customClass="CCQLoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CCQLogin" id="Mst-Lu-Srt" customClass="CCQLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MSZ-vU-c3v"/>
                         <viewControllerLayoutGuide type="bottom" id="H4z-0X-lc9"/>
@@ -839,7 +839,7 @@
         <!--Settings View Controller-->
         <scene sceneID="pnd-tD-zVQ">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="Teq-Ml-lbx" customClass="HMSettingsViewController" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="Teq-Ml-lbx" customClass="CCQSettingsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="KEg-hM-tTU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

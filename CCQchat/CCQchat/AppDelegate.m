@@ -67,4 +67,41 @@
     }
 }
 
+/*!
+ *  SDK连接服务器的状态变化时会接收到该回调
+ *
+ *  有以下几种情况，会引起该方法的调用：
+ *  1. 登录成功后，手机无法上网时，会调用该回调
+ *  2. 登录成功后，网络状态变化时，会调用该回调
+ *
+ *  @param aConnectionState 当前状态
+ */
+- (void)connectionStateDidChange:(EMConnectionState)aConnectionState{
+    
+    switch (aConnectionState) {
+        case EMConnectionConnected:
+            NSLog(@"已经连接");
+            break;
+        case EMConnectionDisconnected:
+            NSLog(@"断开连接");
+            break;
+        default:
+            break;
+    }
+}
+/*!
+ *  当前登录账号在其它设备登录时会接收到该回调
+ */
+- (void)userAccountDidLoginFromOtherDevice{
+    NSLog(@"其他设备已经登录该账号");
+}
+
+/*!
+ *  当前登录账号已经被从服务器端删除时会收到该回调
+ */
+- (void)userAccountDidRemoveFromServer{
+    NSLog(@"该账号不存在");
+}
+
+
 @end
