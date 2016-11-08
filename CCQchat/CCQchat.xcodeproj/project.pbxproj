@@ -18,6 +18,10 @@
 		C20E3D511DD1ED01009D63A8 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D501DD1ED01009D63A8 /* libstdc++.6.0.9.tbd */; };
 		C20E3D531DD1ED1E009D63A8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D521DD1ED1E009D63A8 /* libsqlite3.tbd */; };
 		C20E3D571DD1F406009D63A8 /* CCQLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D561DD1F406009D63A8 /* CCQLoginViewController.m */; };
+		C20E3D631DD1F731009D63A8 /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D5C1DD1F731009D63A8 /* TPKeyboardAvoidingCollectionView.m */; };
+		C20E3D641DD1F731009D63A8 /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D5E1DD1F731009D63A8 /* TPKeyboardAvoidingScrollView.m */; };
+		C20E3D651DD1F731009D63A8 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D601DD1F731009D63A8 /* TPKeyboardAvoidingTableView.m */; };
+		C20E3D661DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D621DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		C258E2BD1DD1DDE6003C5763 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2BC1DD1DDE6003C5763 /* main.m */; };
 		C258E2C01DD1DDE6003C5763 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2BF1DD1DDE6003C5763 /* AppDelegate.m */; };
 		C258E2C31DD1DDE6003C5763 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2C21DD1DDE6003C5763 /* ViewController.m */; };
@@ -71,6 +75,14 @@
 		C20E3D541DD1EF80009D63A8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C20E3D551DD1F406009D63A8 /* CCQLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCQLoginViewController.h; sourceTree = "<group>"; };
 		C20E3D561DD1F406009D63A8 /* CCQLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCQLoginViewController.m; sourceTree = "<group>"; };
+		C20E3D5B1DD1F731009D63A8 /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		C20E3D5C1DD1F731009D63A8 /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		C20E3D5D1DD1F731009D63A8 /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		C20E3D5E1DD1F731009D63A8 /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		C20E3D5F1DD1F731009D63A8 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		C20E3D601DD1F731009D63A8 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		C20E3D611DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		C20E3D621DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		C258E2B81DD1DDE6003C5763 /* CCQchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCQchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C258E2BC1DD1DDE6003C5763 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C258E2BE1DD1DDE6003C5763 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -162,6 +174,7 @@
 		C20E3D401DD1E69C009D63A8 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				C20E3D5A1DD1F731009D63A8 /* TPKeyboardAvoiding */,
 				C20E3D1C1DD1E695009D63A8 /* HyphenateSDK */,
 			);
 			name = lib;
@@ -198,6 +211,21 @@
 				C20E3D561DD1F406009D63A8 /* CCQLoginViewController.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		C20E3D5A1DD1F731009D63A8 /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				C20E3D5B1DD1F731009D63A8 /* TPKeyboardAvoidingCollectionView.h */,
+				C20E3D5C1DD1F731009D63A8 /* TPKeyboardAvoidingCollectionView.m */,
+				C20E3D5D1DD1F731009D63A8 /* TPKeyboardAvoidingScrollView.h */,
+				C20E3D5E1DD1F731009D63A8 /* TPKeyboardAvoidingScrollView.m */,
+				C20E3D5F1DD1F731009D63A8 /* TPKeyboardAvoidingTableView.h */,
+				C20E3D601DD1F731009D63A8 /* TPKeyboardAvoidingTableView.m */,
+				C20E3D611DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				C20E3D621DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
 		C258E2AF1DD1DDE5003C5763 = {
@@ -316,8 +344,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20E3D631DD1F731009D63A8 /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				C258E2C31DD1DDE6003C5763 /* ViewController.m in Sources */,
+				C20E3D651DD1F731009D63A8 /* TPKeyboardAvoidingTableView.m in Sources */,
 				C258E2C01DD1DDE6003C5763 /* AppDelegate.m in Sources */,
+				C20E3D641DD1F731009D63A8 /* TPKeyboardAvoidingScrollView.m in Sources */,
+				C20E3D661DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				C20E3D571DD1F406009D63A8 /* CCQLoginViewController.m in Sources */,
 				C258E2BD1DD1DDE6003C5763 /* main.m in Sources */,
 			);
