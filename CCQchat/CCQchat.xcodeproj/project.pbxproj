@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		C20E3D3F1DD1E696009D63A8 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D3E1DD1E696009D63A8 /* libHyphenateSDK.a */; };
+		C20E3D431DD1EC8B009D63A8 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D421DD1EC8B009D63A8 /* CoreMedia.framework */; };
+		C20E3D451DD1EC97009D63A8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D441DD1EC97009D63A8 /* AudioToolbox.framework */; };
+		C20E3D471DD1ECA2009D63A8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D461DD1ECA2009D63A8 /* AVFoundation.framework */; };
+		C20E3D491DD1ECAD009D63A8 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D481DD1ECAD009D63A8 /* MobileCoreServices.framework */; };
+		C20E3D4B1DD1ECBA009D63A8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D4A1DD1ECBA009D63A8 /* ImageIO.framework */; };
+		C20E3D4D1DD1ECDD009D63A8 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D4C1DD1ECDD009D63A8 /* libc++.tbd */; };
+		C20E3D4F1DD1ECEF009D63A8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D4E1DD1ECEF009D63A8 /* libz.tbd */; };
+		C20E3D511DD1ED01009D63A8 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D501DD1ED01009D63A8 /* libstdc++.6.0.9.tbd */; };
+		C20E3D531DD1ED1E009D63A8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D521DD1ED1E009D63A8 /* libsqlite3.tbd */; };
 		C258E2BD1DD1DDE6003C5763 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2BC1DD1DDE6003C5763 /* main.m */; };
 		C258E2C01DD1DDE6003C5763 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2BF1DD1DDE6003C5763 /* AppDelegate.m */; };
 		C258E2C31DD1DDE6003C5763 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2C21DD1DDE6003C5763 /* ViewController.m */; };
@@ -49,6 +58,15 @@
 		C20E3D3B1DD1E696009D63A8 /* IEMContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMContactManager.h; sourceTree = "<group>"; };
 		C20E3D3C1DD1E696009D63A8 /* IEMGroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMGroupManager.h; sourceTree = "<group>"; };
 		C20E3D3E1DD1E696009D63A8 /* libHyphenateSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateSDK.a; sourceTree = "<group>"; };
+		C20E3D421DD1EC8B009D63A8 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		C20E3D441DD1EC97009D63A8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C20E3D461DD1ECA2009D63A8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C20E3D481DD1ECAD009D63A8 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		C20E3D4A1DD1ECBA009D63A8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C20E3D4C1DD1ECDD009D63A8 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		C20E3D4E1DD1ECEF009D63A8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C20E3D501DD1ED01009D63A8 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
+		C20E3D521DD1ED1E009D63A8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		C258E2B81DD1DDE6003C5763 /* CCQchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCQchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C258E2BC1DD1DDE6003C5763 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C258E2BE1DD1DDE6003C5763 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +84,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C20E3D531DD1ED1E009D63A8 /* libsqlite3.tbd in Frameworks */,
+				C20E3D511DD1ED01009D63A8 /* libstdc++.6.0.9.tbd in Frameworks */,
+				C20E3D4F1DD1ECEF009D63A8 /* libz.tbd in Frameworks */,
+				C20E3D4D1DD1ECDD009D63A8 /* libc++.tbd in Frameworks */,
+				C20E3D4B1DD1ECBA009D63A8 /* ImageIO.framework in Frameworks */,
+				C20E3D491DD1ECAD009D63A8 /* MobileCoreServices.framework in Frameworks */,
+				C20E3D471DD1ECA2009D63A8 /* AVFoundation.framework in Frameworks */,
+				C20E3D451DD1EC97009D63A8 /* AudioToolbox.framework in Frameworks */,
+				C20E3D431DD1EC8B009D63A8 /* CoreMedia.framework in Frameworks */,
 				C20E3D3F1DD1E696009D63A8 /* libHyphenateSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,11 +163,28 @@
 			name = lib;
 			sourceTree = "<group>";
 		};
+		C20E3D411DD1EC8B009D63A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C20E3D521DD1ED1E009D63A8 /* libsqlite3.tbd */,
+				C20E3D501DD1ED01009D63A8 /* libstdc++.6.0.9.tbd */,
+				C20E3D4E1DD1ECEF009D63A8 /* libz.tbd */,
+				C20E3D4C1DD1ECDD009D63A8 /* libc++.tbd */,
+				C20E3D4A1DD1ECBA009D63A8 /* ImageIO.framework */,
+				C20E3D481DD1ECAD009D63A8 /* MobileCoreServices.framework */,
+				C20E3D461DD1ECA2009D63A8 /* AVFoundation.framework */,
+				C20E3D441DD1EC97009D63A8 /* AudioToolbox.framework */,
+				C20E3D421DD1EC8B009D63A8 /* CoreMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C258E2AF1DD1DDE5003C5763 = {
 			isa = PBXGroup;
 			children = (
 				C258E2BA1DD1DDE6003C5763 /* CCQchat */,
 				C258E2B91DD1DDE6003C5763 /* Products */,
+				C20E3D411DD1EC8B009D63A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
