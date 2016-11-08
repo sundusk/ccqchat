@@ -17,6 +17,7 @@
 		C20E3D4F1DD1ECEF009D63A8 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D4E1DD1ECEF009D63A8 /* libz.tbd */; };
 		C20E3D511DD1ED01009D63A8 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D501DD1ED01009D63A8 /* libstdc++.6.0.9.tbd */; };
 		C20E3D531DD1ED1E009D63A8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C20E3D521DD1ED1E009D63A8 /* libsqlite3.tbd */; };
+		C20E3D571DD1F406009D63A8 /* CCQLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D561DD1F406009D63A8 /* CCQLoginViewController.m */; };
 		C258E2BD1DD1DDE6003C5763 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2BC1DD1DDE6003C5763 /* main.m */; };
 		C258E2C01DD1DDE6003C5763 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2BF1DD1DDE6003C5763 /* AppDelegate.m */; };
 		C258E2C31DD1DDE6003C5763 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2C21DD1DDE6003C5763 /* ViewController.m */; };
@@ -67,6 +68,9 @@
 		C20E3D4E1DD1ECEF009D63A8 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C20E3D501DD1ED01009D63A8 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		C20E3D521DD1ED1E009D63A8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C20E3D541DD1EF80009D63A8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C20E3D551DD1F406009D63A8 /* CCQLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCQLoginViewController.h; sourceTree = "<group>"; };
+		C20E3D561DD1F406009D63A8 /* CCQLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCQLoginViewController.m; sourceTree = "<group>"; };
 		C258E2B81DD1DDE6003C5763 /* CCQchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCQchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C258E2BC1DD1DDE6003C5763 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C258E2BE1DD1DDE6003C5763 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -179,6 +183,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C20E3D581DD1F417009D63A8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C20E3D591DD1F420009D63A8 /* Login */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C20E3D591DD1F420009D63A8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C20E3D551DD1F406009D63A8 /* CCQLoginViewController.h */,
+				C20E3D561DD1F406009D63A8 /* CCQLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		C258E2AF1DD1DDE5003C5763 = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +220,7 @@
 		C258E2BA1DD1DDE6003C5763 /* CCQchat */ = {
 			isa = PBXGroup;
 			children = (
+				C20E3D581DD1F417009D63A8 /* Controller */,
 				C20E3D401DD1E69C009D63A8 /* lib */,
 				C258E2BE1DD1DDE6003C5763 /* AppDelegate.h */,
 				C258E2BF1DD1DDE6003C5763 /* AppDelegate.m */,
@@ -217,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				C258E2BC1DD1DDE6003C5763 /* main.m */,
+				C20E3D541DD1EF80009D63A8 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -295,6 +318,7 @@
 			files = (
 				C258E2C31DD1DDE6003C5763 /* ViewController.m in Sources */,
 				C258E2C01DD1DDE6003C5763 /* AppDelegate.m in Sources */,
+				C20E3D571DD1F406009D63A8 /* CCQLoginViewController.m in Sources */,
 				C258E2BD1DD1DDE6003C5763 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,7 +437,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = HCPQ4JRW53;
+				GCC_PREFIX_HEADER = CCQchat/PrefixHeader.pch;
 				INFOPLIST_FILE = CCQchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -429,7 +455,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = HCPQ4JRW53;
+				GCC_PREFIX_HEADER = CCQchat/PrefixHeader.pch;
 				INFOPLIST_FILE = CCQchat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
