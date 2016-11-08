@@ -13,7 +13,7 @@
         <!--添加朋友-->
         <scene sceneID="5YV-DW-Gej">
             <objects>
-                <tableViewController id="2hZ-CP-don" customClass="HMAddContactViewController" sceneMemberID="viewController">
+                <tableViewController id="2hZ-CP-don" customClass="CCQAddContactViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Rol-hm-KpY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -994,7 +994,7 @@
         <!--我-->
         <scene sceneID="CXz-Ui-PgN">
             <objects>
-                <tableViewController id="lKe-YZ-GO5" customClass="HMProfileViewController" sceneMemberID="viewController">
+                <tableViewController id="lKe-YZ-GO5" customClass="CCQProfileViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="vIt-Xc-Qlz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1210,6 +1210,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="我" id="mhg-TY-CrL"/>
+                    <connections>
+                        <outlet property="userNameLabel" destination="mF1-jn-1CT" id="sIq-X2-IN2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oTM-UF-nnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1243,6 +1246,6 @@
         <image name="tabbar_meHL" width="23" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UDM-ju-MT4"/>
+        <segue reference="Gdg-b8-jGl"/>
     </inferredMetricsTieBreakers>
 </document>

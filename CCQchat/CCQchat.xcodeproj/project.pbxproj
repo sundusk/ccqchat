@@ -23,9 +23,10 @@
 		C20E3D651DD1F731009D63A8 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D601DD1F731009D63A8 /* TPKeyboardAvoidingTableView.m */; };
 		C20E3D661DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D621DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
 		C20E3D6A1DD2005E009D63A8 /* CCQSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D691DD2005E009D63A8 /* CCQSettingsViewController.m */; };
+		C20E3D6E1DD20588009D63A8 /* CCQAddContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D6D1DD20588009D63A8 /* CCQAddContactViewController.m */; };
+		C20E3D721DD206C0009D63A8 /* CCQProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C20E3D711DD206C0009D63A8 /* CCQProfileViewController.m */; };
 		C258E2BD1DD1DDE6003C5763 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2BC1DD1DDE6003C5763 /* main.m */; };
 		C258E2C01DD1DDE6003C5763 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2BF1DD1DDE6003C5763 /* AppDelegate.m */; };
-		C258E2C31DD1DDE6003C5763 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C258E2C21DD1DDE6003C5763 /* ViewController.m */; };
 		C258E2C61DD1DDE6003C5763 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C258E2C41DD1DDE6003C5763 /* Main.storyboard */; };
 		C258E2C81DD1DDE6003C5763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C258E2C71DD1DDE6003C5763 /* Assets.xcassets */; };
 		C258E2CB1DD1DDE6003C5763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C258E2C91DD1DDE6003C5763 /* LaunchScreen.storyboard */; };
@@ -86,12 +87,14 @@
 		C20E3D621DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
 		C20E3D681DD2005E009D63A8 /* CCQSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCQSettingsViewController.h; sourceTree = "<group>"; };
 		C20E3D691DD2005E009D63A8 /* CCQSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCQSettingsViewController.m; sourceTree = "<group>"; };
+		C20E3D6C1DD20588009D63A8 /* CCQAddContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCQAddContactViewController.h; sourceTree = "<group>"; };
+		C20E3D6D1DD20588009D63A8 /* CCQAddContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCQAddContactViewController.m; sourceTree = "<group>"; };
+		C20E3D701DD206C0009D63A8 /* CCQProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCQProfileViewController.h; sourceTree = "<group>"; };
+		C20E3D711DD206C0009D63A8 /* CCQProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCQProfileViewController.m; sourceTree = "<group>"; };
 		C258E2B81DD1DDE6003C5763 /* CCQchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCQchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C258E2BC1DD1DDE6003C5763 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C258E2BE1DD1DDE6003C5763 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C258E2BF1DD1DDE6003C5763 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C258E2C11DD1DDE6003C5763 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C258E2C21DD1DDE6003C5763 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C258E2C51DD1DDE6003C5763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C258E2C71DD1DDE6003C5763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C258E2CA1DD1DDE6003C5763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -202,6 +205,8 @@
 		C20E3D581DD1F417009D63A8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C20E3D6F1DD2069C009D63A8 /* Profile */,
+				C20E3D6B1DD20562009D63A8 /* AddFriend */,
 				C20E3D671DD20030009D63A8 /* Settings */,
 				C20E3D591DD1F420009D63A8 /* Login */,
 			);
@@ -241,6 +246,24 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
+		C20E3D6B1DD20562009D63A8 /* AddFriend */ = {
+			isa = PBXGroup;
+			children = (
+				C20E3D6C1DD20588009D63A8 /* CCQAddContactViewController.h */,
+				C20E3D6D1DD20588009D63A8 /* CCQAddContactViewController.m */,
+			);
+			name = AddFriend;
+			sourceTree = "<group>";
+		};
+		C20E3D6F1DD2069C009D63A8 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				C20E3D701DD206C0009D63A8 /* CCQProfileViewController.h */,
+				C20E3D711DD206C0009D63A8 /* CCQProfileViewController.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
 		C258E2AF1DD1DDE5003C5763 = {
 			isa = PBXGroup;
 			children = (
@@ -265,8 +288,6 @@
 				C20E3D401DD1E69C009D63A8 /* lib */,
 				C258E2BE1DD1DDE6003C5763 /* AppDelegate.h */,
 				C258E2BF1DD1DDE6003C5763 /* AppDelegate.m */,
-				C258E2C11DD1DDE6003C5763 /* ViewController.h */,
-				C258E2C21DD1DDE6003C5763 /* ViewController.m */,
 				C258E2C41DD1DDE6003C5763 /* Main.storyboard */,
 				C258E2C71DD1DDE6003C5763 /* Assets.xcassets */,
 				C258E2C91DD1DDE6003C5763 /* LaunchScreen.storyboard */,
@@ -358,13 +379,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C20E3D631DD1F731009D63A8 /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				C20E3D6E1DD20588009D63A8 /* CCQAddContactViewController.m in Sources */,
 				C20E3D6A1DD2005E009D63A8 /* CCQSettingsViewController.m in Sources */,
-				C258E2C31DD1DDE6003C5763 /* ViewController.m in Sources */,
 				C20E3D651DD1F731009D63A8 /* TPKeyboardAvoidingTableView.m in Sources */,
 				C258E2C01DD1DDE6003C5763 /* AppDelegate.m in Sources */,
 				C20E3D641DD1F731009D63A8 /* TPKeyboardAvoidingScrollView.m in Sources */,
 				C20E3D661DD1F731009D63A8 /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				C20E3D571DD1F406009D63A8 /* CCQLoginViewController.m in Sources */,
+				C20E3D721DD206C0009D63A8 /* CCQProfileViewController.m in Sources */,
 				C258E2BD1DD1DDE6003C5763 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

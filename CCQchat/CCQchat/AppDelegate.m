@@ -8,9 +8,9 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()<EMClientDelegate>
-
-@end
+@interface AppDelegate ()<EMClientDelegate,EMContactManagerDelegate>
+//好友请求数
+@property (nonatomic, assign) NSInteger friendRequestCount;@end
 
 @implementation AppDelegate
 
@@ -25,7 +25,8 @@
     
     //添加回调监听代理:
     [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
-    
+    //注册好友回调
+    [[EMClient sharedClient].contactManager addDelegate:self delegateQueue:nil];
     //判断是否可以自动登录
     BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
     if (isAutoLogin) {//自动登录，修改根控制器
@@ -51,6 +52,86 @@
     [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
 
+#pragma mark - EMContactManagerDelegate
+
+/*!
+ *  用户A发送加用户B为好友的申请，用户B会收到这个回调
+ *
+ *  @param aUsername   用户名
+ *  @param aMessage    附属信息
+ */
+- (void)friendRequestDidReceiveFromUser:(NSString *)aUsername
+                                message:(NSString *)aMessage{
+    //接收到好友请求后,添加通讯录角标
+    UITabBarController *tabBarVc = self.window.rootViewController;
+    tabBarVc.viewControllers[1].tabBarItem.badgeValue = [NSString stringWithFormat:@"%zd", ++self.friendRequestCount];
+    
+    //让用户选择是否加好友
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"好友请求" message:[NSString stringWithFormat:@"%@想要添加您为好友,备注:%@", aUsername, aMessage] preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action1 = [UIAlertAction actionWithTitle:@"同意" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //同意请求
+        EMError *error = [[EMClient sharedClient].contactManager acceptInvitationForUsername:aUsername];
+        if (!error) {
+            NSLog(@"发送同意成功");
+            //如果角标为0,则设置nil
+            if (--self.friendRequestCount == 0) {
+                
+                tabBarVc.viewControllers[1].tabBarItem.badgeValue = nil;
+            }else {
+                
+                tabBarVc.viewControllers[1].tabBarItem.badgeValue = [NSString stringWithFormat:@"%zd", self.friendRequestCount];
+            }
+        }
+    }];
+    
+    UIAlertAction *action2 = [UIAlertAction actionWithTitle:@"拒绝" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        //拒绝请求
+        EMError *error = [[EMClient sharedClient].contactManager declineInvitationForUsername:aUsername];
+        if (!error) {
+            NSLog(@"发送拒绝成功");
+        }
+    }];
+    
+    [alertController addAction:action1];
+    [alertController addAction:action2];
+    //进行modal展示
+    [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+    
+}
+
+
+/*!
+ @method
+ @brief 用户A发送加用户B为好友的申请，用户B同意后，用户A会收到这个回调
+ */
+- (void)friendRequestDidApproveByUser:(NSString *)aUsername{
+    //对方同意好友请求
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"好友通知" message:[NSString stringWithFormat:@"%@已经成为您的好友", aUsername] preferredStyle:UIAlertControllerStyleAlert];
+    //进行modal展示
+    [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+    
+    //延迟销毁
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    });
+}
+
+/*!
+ @method
+ @brief 用户A发送加用户B为好友的申请，用户B拒绝后，用户A会收到这个回调
+ */
+- (void)friendRequestDidDeclineByUser:(NSString *)aUsername{
+    //对方拒绝好友请求
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"好友通知" message:[NSString stringWithFormat:@"%@拒绝成为您的好友", aUsername] preferredStyle:UIAlertControllerStyleAlert];
+    //进行modal展示
+    [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
+    
+    //延迟销毁
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    });
+}
 
 #pragma mark - EMClientDelegate
 /*!

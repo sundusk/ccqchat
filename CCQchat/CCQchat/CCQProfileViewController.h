@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CCQProfileViewController.h
 //  CCQchat
 //
 //  Created by 夜兔神威 on 2016/11/8.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CCQProfileViewController : UITableViewController
 
 @end
-
